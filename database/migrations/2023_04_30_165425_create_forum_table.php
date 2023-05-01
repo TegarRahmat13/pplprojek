@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClientDataTable extends Migration
+class CreateForumTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateClientDataTable extends Migration
      */
     public function up()
     {
-        Schema::create('client_data', function (Blueprint $table) {
+        Schema::create('forum', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->string('namausaha');
-            $table->longText('deskripsi');
-            $table->string('harga');
+            $table->string('isi_post');
+            $table->string('judul_post');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateClientDataTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('client_data');
+        Schema::dropIfExists('forum');
     }
 }

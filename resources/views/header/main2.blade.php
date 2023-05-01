@@ -24,7 +24,7 @@
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="homeAgro.php" class="nav__link">Home</a>
+                            <a href="homeMitra" class="nav__link">Home</a>
                         </li>
                         <li class="nav__item">
                             <a href="#" class="nav__link">Permintaan</a>
@@ -52,7 +52,7 @@
 
                         <ul class="sub__list">
                             <li class="sub__item">
-                                <a href="updateProfilMitra.php">
+                                <a href="updateProfilMitra">
                                 <div class="item">
                                     <i class="ri-user-line"></i>
                                     <p>Profile</p>
@@ -67,7 +67,7 @@
                                 </a>
                             </li>
                             <li class="sub__item">
-                                <a href="melihatTabelMitra_Agro.php">
+                                <a href="#">
                                     <div class="item">
                                         <i class="ri-store-2-line"></i><p>Mitra</p>
                                     </div>    

@@ -7,9 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-<a href="agro/login.blade.php" class="delete-btn">Agro</a>
+<a href="/loginAgro" class="delete-btn">Agro</a>
 <br>
-<a href="view/mitrapage/loginMitra.php" class="delete-btn">Mitra</a>
+<a href="/loginMitra" class="delete-btn">Mitra</a>
 <br>
 <a href="view/admin/loginAdmin.php" class="delete-btn">Admin</a>
 </body>

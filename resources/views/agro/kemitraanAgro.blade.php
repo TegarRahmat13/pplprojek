@@ -26,16 +26,16 @@
 @extends('header.main')
 
 @section('container')
-<div class="btnmitra" style="margin: auto;width:40%;margin-top:5%">
-    <div class="mitrabtn" style="margin-bottom: 2%;">
-        <img src="../../image/mdi_user-multiple.png" alt="">
-        <h3>Jumlah Mitra</h3>
-    </div>
-    <a href="#">
-        <div class="mitrabtn">
-            <img src="../../image/mdi_paper-text.png" alt="">
-            <h3>Surat Bermitra</h3>
+    <div class="btnmitra" style="margin: auto;width:40%;margin-top:5%">
+        <div class="mitrabtn" style="margin-bottom: 2%;">
+            <img src="../../image/mdi_user-multiple.png" alt="">
+            <h3>Jumlah Mitra</h3>
         </div>
-    </a>
-</div>
+        <a href="#">
+            <div class="mitrabtn">
+                <img src="../../image/mdi_paper-text.png" alt="">
+                <h3>Surat Bermitra</h3>
+            </div>
+        </a>
+    </div>
 @endsection

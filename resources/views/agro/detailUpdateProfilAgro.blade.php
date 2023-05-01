@@ -64,7 +64,7 @@
     <hr>
         <div class="row">
             <div class="column1">
-                <img src="" alt="">
+                <input type="file" name="image" id="" style="margin-top: 30%" >
             <br>
             <div class="btn_col1">
                 <div class="btn_tambah">

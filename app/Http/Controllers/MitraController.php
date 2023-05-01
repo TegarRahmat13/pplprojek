@@ -18,6 +18,15 @@ class MitraController extends Controller
     {
         return view('mitra.homeMitra');
     }
+    public function updateProfilMitra() 
+    {
+       
+        return view('mitra.updateProfilMitra');
+    }
+    public function detailUpdateProfilMitra() 
+    {
+        return view('mitra.detailUpdateProfilMitra');
+    }
     public function kemitraanMitra() 
     {
         return view('mitra.kemitraanMitra');

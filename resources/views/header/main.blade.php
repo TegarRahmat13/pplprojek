@@ -24,19 +24,19 @@
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="/home" class="nav__link">Home</a>
+                            <a href="/homeAgro" class="nav__link">Home</a>
                         </li>
                         <li class="nav__item">
-                            <a href="{{ route('permintaan') }}" class="nav__link">Permintaan</a>
+                            <a href="{{ route('permintaanAgro') }}" class="nav__link">Permintaan</a>
                         </li>
                         <li class="nav__item">
                             <a href="#" class="nav__link">Forum</a>
                         </li>
                         <li class="nav__item">
-                            <a href="{{ route('kemitraan') }}" class="nav__link">Kemitraan</a>
+                            <a href="{{ route('kemitraanAgro') }}" class="nav__link">Kemitraan</a>
                         </li>
                         <li class="nav__item">
-                            <a href="{{ route('pencatatan') }}" class="nav__link">Pencatatan</a>
+                            <a href="{{ route('pencatatanAgro') }}" class="nav__link">Pencatatan</a>
                         </li>
                     </ul>
                 </div>
@@ -55,7 +55,7 @@
 
                         <ul class="sub__list">
                             <li class="sub__item">
-                                <a href="profil">
+                                <a href="updateProfilAgro">
                                 <div class="item">
                                     <i class="ri-user-line"></i>
                                     <p>Profile</p>

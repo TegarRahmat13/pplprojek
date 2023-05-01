@@ -4,6 +4,7 @@
         margin-top: 20px;
     }
     .row{
+        margin-top: 10%;
         display:grid;
         grid-template-columns: 33.33% 33.33% 33.33%;
         justify-content: center;
@@ -19,6 +20,7 @@
         width: 300px;
     }
     .btn_edit {
+        margin-top: 10%;
         background: #159895;
         color: white;
         width: 100px;
@@ -28,6 +30,7 @@
         margin: 0;
     }
     .btn_tambah {
+        margin-top: 10%;
         background: #159895;
         color: white;
         width: 100px;
@@ -70,14 +73,14 @@
 <hr>
     <div class="row">
         <div class="column1">
-            <img src="" alt="">
+            <input type="file" name="image" id="">
         <br>
         <div class="btn_col1">
             <div class="btn_tambah">
-                        <a href="editUpdateProfilAgro.php">Tambah</a>
+                        <a href="detailUpdateProfilAgro">Tambah</a>
                     </div>
                 <div class="btn_edit">
-                        <a href="editUpdateProfilAgro.php">Edit</a>
+                        <a href="detailUpdateProfilAgro">Edit</a>
                     </div>
         </div>
         </div>

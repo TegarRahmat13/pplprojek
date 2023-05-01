@@ -21,11 +21,11 @@
                 <h2>Register</h2>
                 <p>Silahkan Membuat akun terlebih dahulu</p>
             </div>
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('authRegisterAgro') }}" method="POST" enctype="multipart/form-data">
         <div class="log__input">
         <div class="input__box">
                 <!-- <i class="ri-mail-line"></i> -->
-                <input type="text" name="name" placeholder="enter username" class="box" required>
+                <input type="text" name="name" placeholder="enter name" class="box" required>
             </div>
             <div class="input__box">
                 <i class="ri-mail-line"></i>
@@ -43,6 +43,7 @@
                 <i class="ri-mail-line"></i>
                 <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png">
             </div> --}}
+            <p>{{ Session::get('msg') }}</p>
             <button  class="log__in button" type="submit" name="submit" value="register now" style="margin-top: 10px" >
             Register
             </button> 

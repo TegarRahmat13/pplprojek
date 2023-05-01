@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClientDataTable extends Migration
+class CreateTransaksiTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateClientDataTable extends Migration
      */
     public function up()
     {
-        Schema::create('client_data', function (Blueprint $table) {
+        Schema::create('transaksi', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->string('namausaha');
-            $table->longText('deskripsi');
-            $table->string('harga');
+            $table->string('nominal');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateClientDataTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('client_data');
+        Schema::dropIfExists('transaksi');
     }
 }

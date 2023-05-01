@@ -1,6 +1,4 @@
 @extends('header.main')
- 
-
 @section('container')
 <div class="container">
     <div class="maincontent" style="display: flex;">
