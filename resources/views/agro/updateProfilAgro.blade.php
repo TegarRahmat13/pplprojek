@@ -69,38 +69,38 @@
 @extends('header.main')
 
 @section('container')
-<h1 style="margin-left:5% ;" >Profile</h1>
-<hr>
-    <div class="row">
-        <div class="column1">
-            <input type="file" name="image" id="">
-        <br>
-        <div class="btn_col1">
-            <div class="btn_tambah">
-                        <a href="detailUpdateProfilAgro">Tambah</a>
-                    </div>
-                <div class="btn_edit">
-                        <a href="detailUpdateProfilAgro">Edit</a>
-                    </div>
+    <h1 style="margin-left:5% ;" >Profile</h1>
+    <hr>
+        <div class="row">
+            <div class="column1">
+                <input type="file" name="image" id="">
+            <br>
+            <div class="btn_col1">
+                <div class="btn_tambah">
+                            <a href="detailUpdateProfilAgro">Tambah</a>
+                        </div>
+                    <div class="btn_edit">
+                            <a href="detailUpdateProfilAgro">Edit</a>
+                        </div>
+            </div>
+            </div>
+            <div class="column2">
+                <label for="">Username</label><br>
+                    <input type="text" name="name" class="form-control" id="exampleInputEmail1" style="height: 10%; width: 60%" ><br><br>
+                <label for="">Nomor Telepon</label><br>
+                    <input type="number" name="name" class="form-control"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
+                <label for="">Nama Usaha</label><br>
+                    <input type="text" name="name" class="form-control"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
+                <label for="">Harga</label><br>
+                    <input type="number" name="name" class="form-control"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
+            </div>
+            <div class="column3">
+                <label for="">Email</label><br>
+                        <input type="email" name="name"  id="exampleInputEmail1" style="height: 10%; width: 60%" ><br><br>
+                    <label for="">Alamat</label><br>
+                        <input type="text" name="name"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
+                    <label for="">Deskripsi</label><br>
+                        <input type="text" name="name"  id="exampleInputEmail1" style="height: 35%; width: 60%"><br><br>
+            </div>
         </div>
-        </div>
-        <div class="column2">
-            <label for="">Username</label><br>
-                <input type="text" name="name" class="form-control" id="exampleInputEmail1" style="height: 10%; width: 60%" ><br><br>
-            <label for="">Nomor Telepon</label><br>
-                <input type="number" name="name" class="form-control"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
-            <label for="">Nama Usaha</label><br>
-                <input type="text" name="name" class="form-control"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
-            <label for="">Harga</label><br>
-                <input type="number" name="name" class="form-control"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
-        </div>
-        <div class="column3">
-            <label for="">Email</label><br>
-                    <input type="email" name="name"  id="exampleInputEmail1" style="height: 10%; width: 60%" ><br><br>
-                <label for="">Alamat</label><br>
-                    <input type="text" name="name"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
-                <label for="">Deskripsi</label><br>
-                    <input type="text" name="name"  id="exampleInputEmail1" style="height: 35%; width: 60%"><br><br>
-        </div>
-    </div>
 @endsection

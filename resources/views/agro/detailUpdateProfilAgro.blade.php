@@ -59,39 +59,40 @@
     }
 </style>
 
-<body>
-    <h1 style="margin-left:5% ;" >Profile</h1>
-    <hr>
-        <div class="row">
-            <div class="column1">
-                <input type="file" name="image" id="" style="margin-top: 30%" >
-            <br>
-            <div class="btn_col1">
-                <div class="btn_tambah">
-                        </div>
-            </div>
-            </div>
-            <div class="column2">
-                <label for="">Username</label><br>
-                    <input type="text" name="update_name" class="form-control"   id="exampleInputEmail1" style="height: 10%; width: 60%" ><br><br>
-                <label for="">Nomor Telepon</label><br>
-                    <input type="number" name="update_nomortelepon" class="form-control" id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
-                <label for="">Nama Usaha</label><br>
-                    <input type="text" name="update_namausaha" class="form-control"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
-                <label for="">Harga</label><br>
-                    <input type="number" name="update_harga" class="form-control"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
-            </div>
-            <div class="column3">
-                <label for="">Email</label><br>
-                        <input type="email" name="update_email"  id="exampleInputEmail1" style="height: 10%; width: 60%" ><br><br>
-                    <label for="">Alamat</label><br>
-                        <input type="text" name="update_alamatProfil"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
-                    <label for="">Deskripsi</label><br>
-                        <input type="text" name="update_deskripsi"  id="exampleInputEmail1" style="height: 35%; width: 60%"><br><br>
-            </div>
+@extends('header.main')
+@section('container')
+<h1 style="margin-left:5% ;" >Profile</h1>
+<hr>
+    <div class="row">
+        <div class="column1">
+            <input type="file" name="image" id="" style="margin-top: 30%" >
+        <br>
+        <div class="btn_col1">
+            <div class="btn_tambah">
+                    </div>
         </div>
-        <div class="btn_simpan">
-            <button type="submit" value="update profile" name="submit" class="btn_submit" style="background:#159895;">Submit</button>
         </div>
-            </form>
-</body>
+        <div class="column2">
+            <label for="">Username</label><br>
+                <input type="text" name="update_name" class="form-control"   id="exampleInputEmail1" style="height: 10%; width: 60%" ><br><br>
+            <label for="">Nomor Telepon</label><br>
+                <input type="number" name="update_nomortelepon" class="form-control" id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
+            <label for="">Nama Usaha</label><br>
+                <input type="text" name="update_namausaha" class="form-control"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
+            <label for="">Harga</label><br>
+                <input type="number" name="update_harga" class="form-control"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
+        </div>
+        <div class="column3">
+            <label for="">Email</label><br>
+                    <input type="email" name="update_email"  id="exampleInputEmail1" style="height: 10%; width: 60%" ><br><br>
+                <label for="">Alamat</label><br>
+                    <input type="text" name="update_alamatProfil"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
+                <label for="">Deskripsi</label><br>
+                    <input type="text" name="update_deskripsi"  id="exampleInputEmail1" style="height: 35%; width: 60%"><br><br>
+        </div>
+    </div>
+    <div class="btn_simpan">
+        <button type="submit" value="update profile" name="submit" class="btn_submit" style="background:#159895;">Submit</button>
+    </div>
+        </form>
+@endsection

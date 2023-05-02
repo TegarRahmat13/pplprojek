@@ -19,28 +19,30 @@
     }
     </style>
     
-    <body>
-        <table>
-            <tr>
-                <th>No</th>
-                <th>Nama Pengaju</th>
-                <th>Detail</th>
-                <th>Status</th>
-                <th>Aksi</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td></td>
-                <td></td>
-                <td><a href="#">Lihat</a></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
-    </body>
+@extends('header.main')
+
+@section('container')
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Nama Pengaju</th>
+            <th>Detail</th>
+            <th>Status</th>
+            <th>Aksi</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td><a href="#">Lihat</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+@endsection

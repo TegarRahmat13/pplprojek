@@ -44,6 +44,7 @@
     </style> 
 
 @extends('header.main')
+
 @section('container')
     <div class="row">
         <div class="column_1">
