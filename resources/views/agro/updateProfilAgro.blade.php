@@ -73,34 +73,34 @@
     <hr>
         <div class="row">
             <div class="column1">
-                <input type="file" name="image" id="">
+                <input type="file" name="image" id="" >
             <br>
             <div class="btn_col1">
-                <div class="btn_tambah">
+                {{-- <div class="btn_tambah">
                             <a href="detailUpdateProfilAgro">Tambah</a>
-                        </div>
+                        </div> --}}
                     <div class="btn_edit">
-                            <a href="detailUpdateProfilAgro">Edit</a>
+                            <a href="#">Edit</a>
                         </div>
             </div>
             </div>
             <div class="column2">
                 <label for="">Username</label><br>
-                    <input type="text" name="name" class="form-control" id="exampleInputEmail1" style="height: 10%; width: 60%" ><br><br>
+                    <input type="text" name="name" class="form-control" id="exampleInputEmail1" style="height: 10%; width: 60%" value="{{ Auth::user()->name }}"><br><br>
                 <label for="">Nomor Telepon</label><br>
-                    <input type="number" name="name" class="form-control"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
+                    <input type="number" name="name" class="form-control"  id="exampleInputEmail1" style="height: 10%; width: 60%" value="{{ Auth::user()->ClientData->nomor_telp }}"><br><br>
                 <label for="">Nama Usaha</label><br>
-                    <input type="text" name="name" class="form-control"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
+                    <input type="text" name="name" class="form-control"  id="exampleInputEmail1" style="height: 10%; width: 60%" value="{{ Auth::user()->ClientData->namausaha }}"><br><br>
                 <label for="">Harga</label><br>
-                    <input type="number" name="name" class="form-control"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
+                    <input type="number" name="name" class="form-control"  id="exampleInputEmail1" style="height: 10%; width: 60%" value="{{ Auth::user()->ClientData->harga }}"><br><br>
             </div>
             <div class="column3">
                 <label for="">Email</label><br>
-                        <input type="email" name="name"  id="exampleInputEmail1" style="height: 10%; width: 60%" ><br><br>
+                        <input type="email" name="name"  id="exampleInputEmail1" style="height: 10%; width: 60%" value="{{ Auth::user()->email }}"><br><br>
                     <label for="">Alamat</label><br>
-                        <input type="text" name="name"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
+                        <input type="text" name="name"  id="exampleInputEmail1" style="height: 10%; width: 60%" value="{{ Auth::user()->ClientData->alamat }}"><br><br>
                     <label for="">Deskripsi</label><br>
-                        <input type="text" name="name"  id="exampleInputEmail1" style="height: 35%; width: 60%"><br><br>
+                        <input type="text" name="name"  id="exampleInputEmail1" style="height: 35%; width: 60%" value="{{ Auth::user()->ClientData->deskripsi }}"><br><br>
             </div>
         </div>
 @endsection

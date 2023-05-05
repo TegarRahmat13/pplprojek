@@ -75,7 +75,7 @@
         font-size: 1.2rem;
         font-weight: 600;
     }
-    .usaha__user-icon,.usaha__loc-icon{
+    .usaha__user-icon,.harga__title,.usaha__loc-icon{
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -124,18 +124,24 @@
                 </li>
             </ul>
         </div>
+
+        @foreach ($kemitraan as $item)
         <div class="kemitraan__usaha-prodcut grid">
             <div class="usaha grid">
                 <img class="usaha-img" src="../../image/mitra/kangkung.jpg" alt="">
                 <div class="usaha__title">
-                    <h1>Kangkung Hidroponik</h1>
+                    <h1>{{ $item->namausaha }}</h1>
                     <div class="usaha__user-icon">
                         <i class="ri-user-line"></i>
-                        <p>Ilham Zamzami</p>
+                        <p>{{ $item->user->name }}</p>
+                    </div>
+                    <div class="harga__title">
+                        <i class="ri-coin-line"></i>
+                        <p>{{ $item->harga }}</p>
                     </div>
                     <div class="usaha__loc-icon">
                         <i class="ri-map-pin-line"></i>
-                        <p>Jember, Jawa Timur</p>
+                        <p>{{ $item->alamat }}</p>
                     </div>
                     <button class="usaha__title-but" onclick="location.href='detailKemitraanMitra'">
                         Lihat detail
@@ -229,4 +235,6 @@
             </div>
         </div>
     </div>
+        @endforeach
+        
 @endsection

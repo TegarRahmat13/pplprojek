@@ -24,6 +24,7 @@ class User extends Authenticatable
         'image',
         'nomortelp',
         'alamat',
+        'role'
     ];
 
     /**
@@ -44,7 +45,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function ClientData(){
+    public function ClientData()
+    {
         return $this->hasOne(ClientData::class);
+    }
+
+    public function MitraData()
+    {
+        return $this->hasOne(MitraData::class);
     }
 }

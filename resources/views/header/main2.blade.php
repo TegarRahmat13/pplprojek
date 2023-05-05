@@ -46,19 +46,24 @@
                     <div class="sub-menu">
                         <div class="user-info">
                             <img src="../../asset/user.png" alt="">
-                            <h2>Ilham Zamzami</h2>
+                            <h2>{{ Auth::user()->name }}</h2>
                         </div>
                         <hr>
 
                         <ul class="sub__list">
                             <li class="sub__item">
-                                <a href="updateProfilMitra">
-                                <div class="item">
-                                    <i class="ri-user-line"></i>
-                                    <p>Profile</p>
-                                </div>
-                                </a>
-                            </li>
+                                <li class="sub__item">
+                                    @if (!Auth::user()->MitraData)
+                                        <a href="createProfilMitra">
+                                    @else
+                                        <a href="updateProfilMitra">
+                                    @endif
+                                    <div class="item">
+                                        <i class="ri-user-line"></i>
+                                        <p>Profile</p>
+                                    </div>
+                                    </a>
+                                </li>
                             <li class="sub__item">
                                 <a href="#">
                                 <div class="item">

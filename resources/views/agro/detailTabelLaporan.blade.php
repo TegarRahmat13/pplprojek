@@ -46,22 +46,25 @@
 @extends('header.main')
 
 @section('container')
+<form action="{{ route('tambah_laporan') }}" method="POST">
+    @csrf
     <div class="row">
         <div class="column_1">
             <label>Tanggal Produksi</label> <br>
-                <input type="date" name="tanggal_produksi" style="height: 15%; width: 50%;" ><br><br>
+                <input type="date" name="tgl_produksi" style="height: 15%; width: 50%;" ><br><br>
             <label>Produksi Awal</label> <br>
-                <input name="name" type="number" style="height: 15%; width: 50%;">Kg
+                <input name="produksi_akhir" type="number" style="height: 15%; width: 50%;">Kg
         </div>
         <div class="column_2">
             <label style="margin-right: 40%;">Deskripsi</label> <br>
-                <input name="name" type="text" placeholder="Masukkan deskripsi" style="height: 15%; width: 50%;"><br>
+                <input name="deskripsi" type="text" placeholder="Masukkan deskripsi" style="height: 15%; width: 50%;"><br>
                 <br>
                 <label style="margin-right: 30%;">Produksi Akhir</label> <br>
-                <input name="name" type="number" style="height: 15%; width: 50%;">Kg
+                <input name="produksi_awal" type="number" style="height: 15%; width: 50%;">Kg
         </div>
     </div>
     <div class="btn___simpan">
-        <a href="tabelLaporan">Simpan</a>
+        <button type="submit" class="btn_submit" style="background:#159895;">Simpan</button>
     </div>
+</form>
 @endsection

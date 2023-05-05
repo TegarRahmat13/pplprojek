@@ -2,7 +2,7 @@
     table {
         position: relative;
         width: 50%;
-        top: 0;
+        top: 100;
         left: 25%;
         margin-bottom: 20px;
         text-align: center;
@@ -33,8 +33,8 @@
         <tr>
             <td>1</td>
             <td></td>
+            <td><a href="detailTabelSuratBermitra">Lihat</a></td>
             <td></td>
-            <td><a href="#">Lihat</a></td>
             <td></td>
         </tr>
         <tr>

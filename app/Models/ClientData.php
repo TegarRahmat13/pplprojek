@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ClientData extends Model
 {
     use HasFactory;
+    protected $table = 'client_data';
     protected $guarded = ['id'];
 
     public function user(){

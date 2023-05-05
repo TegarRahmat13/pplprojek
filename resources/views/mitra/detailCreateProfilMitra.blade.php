@@ -63,32 +63,32 @@
 @extends('header.main2')
 
 @section('container2')
+<form action="{{ route('Create_ProfilMitra') }}" method="POST" enctype="multipart/form-data">
     <h1 style="margin-left:5% ;" >Profile</h1>
     <hr>
         <div class="row">
             <div class="column1">
-                <input type="file" name="image" id="">
+                <input type="file" name="update_image" id="">
             </div>
             <div class="column2">
                 <label for="">Username</label><br>
-                    <input type="text" name="name" id="" style="height: 10%; width: 60%" ><br><br>
+                    <input type="text" name="name" id="" style="height: 10%; width: 60%" value="{{ Auth::user()->name }}"><br><br>
                 <label for="">Nomor Telepon</label><br>
-                    <input type="number" name="name" id="" style="height: 10%; width: 60%"><br><br>
+                    <input type="number" name="update_nomortelp" id="" style="height: 10%; width: 60%"><br><br>
                 <label for="">Nama Usaha</label><br>
-                    <input type="text" name="name" id="" style="height: 10%; width: 60%"><br><br>
-                <label for="">Harga</label><br>
-                    <input type="number" name="name" id="" style="height: 10%; width: 60%"><br><br>
+                    <input type="text" name="update_namausaha" id="" style="height: 10%; width: 60%"><br><br>
             </div>
             <div class="column3">
                 <label for="">Email</label><br>
-                        <input type="email" name="name" id="" style="height: 10%; width: 60%" ><br><br>
+                        <input type="email" name="name" id="" style="height: 10%; width: 60%" value="{{ Auth::user()->email }}"><br><br>
                     <label for="">Alamat</label><br>
-                        <input type="text" name="name" id="" style="height: 10%; width: 60%"><br><br>
+                        <input type="text" name="update_alamat" id="" style="height: 10%; width: 60%"><br><br>
                     <label for="">Deskripsi</label><br>
-                        <input type="text" name="name" id="" style="height: 35%; width: 60%"><br><br>
+                        <input type="text" name="update_deskripsi" id="" style="height: 35%; width: 60%"><br><br>
             </div>
         </div>
         <div class="btn_simpan">
-            <a href="updateProfilMitra">Simpan</a>
+            <button type="submit" class="btn_submit" style="background:#159895;">Submit</button>
         </div>
+</form>
 @endsection

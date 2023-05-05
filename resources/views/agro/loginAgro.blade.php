@@ -9,8 +9,6 @@
 
 </head>
 <body>
-<form action="agro/login" method="post">
-    @csrf
 <div class="login__container container">
     <div class="login__left">
         <h1 class="text-1">Agrocorp</h1>
@@ -22,7 +20,7 @@
                 <h2>Login</h2>
                 <p>Bersama kami memajukan pertanian indonesia</p>
             </div>
-        <form method="POST">
+        <form action="{{ route("loginAgro.auth") }}" method="POST">
         <div class="log__input">
             <div class="input__box">
                 <i class="ri-mail-line"></i>
@@ -36,12 +34,11 @@
             <button  class="log__in button" type="submit" name="submit" >
             Login Now
             </button> 
-            <div class="text__sign-up">Don't have an account? <a href="registerAgro.php" class="reg__now">register now</a></div>
+            <div class="text__sign-up">Don't have an account? <a href="registerAgro" class="reg__now">register now</a></div>
         </div>
         </form>
     </div>
 </div> 
-</form>
 </body>
 </html>
 

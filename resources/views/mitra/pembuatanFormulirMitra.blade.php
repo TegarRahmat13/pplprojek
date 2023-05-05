@@ -35,10 +35,24 @@
     border: none;
     cursor: pointer;
 }
+.btn_simpan {
+        position: absolute;
+        margin-top: 10%;
+        float: unset;
+        text-align: center;
+        background: #159895;
+        color: white;
+        width: 100px;
+        border-radius: 5px;
+        font-size: 20px;
+        align-items: center;
+        left: 50%;
+    }
 </style>
 @extends('header.main2')
 
 @section('container2')
+<form action="create_FormulirMitra" method="POST" enctype="multipart/form-data">
     <div class="back__tombol">
         <i class="ri-arrow-left-circle-fill"></i>
         <a href="mitra_kemitraanDetail.php">
@@ -49,50 +63,49 @@
         <div class="formleft grid">
             <div class="formNama">
                 <p>Nama</p>
-                <input type="text" placeholder="Masukan Namamu">
+                <input type="text" name="update_nama" placeholder="Masukan Namamu">
             </div>
             <div class="formNik">
                 <p>NIK</p>
-                <input type="text" placeholder="NIK 16 Digit">
+                <input type="number" name="update_nik" placeholder="NIK 16 Digit">
             </div>
             <div class="formAlasan">
                 <p>Alasan Bermitra</p>
-                <input type="text" placeholder="Berikan Alasanmu">
+                <input type="text" name="update_alasan" placeholder="Berikan Alasanmu">
             </div>
         </div>
         <div class="formCenter grid">
             <div class="formUsaha">
                     <p>Nama Usaha</p>
-                    <input type="text" placeholder="Masukan Nama Usaha">
+                    <input type="text" name="update_namausaha" placeholder="Masukan Nama Usaha">
                 </div>
                 <div class="formAlamat">
                     <p>Alamat</p>
-                    <input type="text" placeholder="Masukan Alamat">
+                    <input type="text" name="update_alamat" placeholder="Masukan Alamat">
                 </div>
                 <div class="formDeskripsi">
                     <p>Deskripsi Usaha</p>
-                    <input type="text" placeholder="Berikan Deskripsi singkat">
+                    <input type="text" name="update_deskripsi"  placeholder="Berikan Deskripsi singkat">
                 </div>
             </div>
         <div class="formRight grid">
             <div class="formTelepom ">
                     <p>No Telepon</p>
-                    <input type="text" placeholder="No Handphone">
+                    <input type="number" name="update_nomortelp" placeholder="No Handphone">
                 </div>
                 <div class="formNik">
                     <p>Kode Pos</p>
-                    <input type="text" placeholder="Kode Pos">
+                    <input type="number" name="update_kodePos" placeholder="Kode Pos">
                 </div>
                 <div class="formAlasan">
                     <p>Permintaan Suply</p>
-                    <input type="text" placeholder="Apa yang kamu butuhkan">
+                    <input type="text" name="update_permintaan" placeholder="Apa yang kamu butuhkan">
                 </div>
             </div>
         </div>
-        <div class="buttonForm">
-            <button  class="formMitra button" onclick="location.href='#'" >
-            Kirim
-            </button> 
+    <div class="btn_simpan">
+            <button type="submit" class="btn_submit" style="background:#159895;">Kirim</button> 
         </div>
     </div>
+</form>
 @endsection

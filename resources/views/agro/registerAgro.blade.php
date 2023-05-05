@@ -43,7 +43,9 @@
                 <i class="ri-mail-line"></i>
                 <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png">
             </div> --}}
-            <p>{{ Session::get('msg') }}</p>
+            @if (session("error"))
+                <p>{{ session("error") }}</p>
+            @endif
             <button  class="log__in button" type="submit" name="submit" value="register now" style="margin-top: 10px" >
             Register
             </button> 

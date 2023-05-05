@@ -17,8 +17,11 @@ class CreateClientDataTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->string('namausaha');
+            $table->string('nomor_telp')->nullable();
+            $table->string('alamat');
             $table->longText('deskripsi');
-            $table->string('harga');
+            $table->bigInteger('harga');
+            $table->string('image');
             $table->timestamps();
         });
     }

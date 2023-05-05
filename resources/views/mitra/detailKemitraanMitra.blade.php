@@ -51,30 +51,32 @@
 @extends('header.main2')
 
 @section('container2')
-    <div class="kemitraanDetail grid">
-        <div class="kemitraanDetail__left">
-            <img class="kemitraan-img" src="../../image/mitra/kangkung.jpg" alt="">
-        </div>
-        <div class="kemitraanDetail__right">
-            <h1 class="leftUsaha__info">
-                Kangkung <br>Hidroponik
-            </h1>
-            <div class="leftName__info flex">
-                <i class="ri-user-line" style="margin-right: 10px;"></i>Dani Sumargo
-            </div>
-            <div class="leftName__info flex">
-            <i class="ri-money-dollar-circle-line" style="margin-right: 10px;"></i>Rp.18.000/Kg
-            </div>
-            <div class="leftLoc__info flex">
-                <i class="ri-map-pin-line" style="margin-right: 10px;" ></i>Jember, Jawa Timur
-            </div>
-            <p class="leftDetail__info">
-                lorem ipsum dolot sit amet, lorem ipsum dolot sit amet lorem
-                sit amet lorem ipsum dolot lorem ipsum dolot sit amet
-            </p>
-            <button class="kemitraanDetail__button" onclick="location.href='pembuatanFormulirMitra'">
-            AJUKAN KERJASAMA
-            </button>
-        </div>
+@foreach ($Detail_kemitraan as $item)
+<div class="kemitraanDetail grid">
+    <div class="kemitraanDetail__left">
+        <img class="kemitraan-img" src="../../image/mitra/kangkung.jpg" alt="">
     </div>
+    <div class="kemitraanDetail__right">
+        <h1 class="leftUsaha__info">
+            {{ $item->namausaha }}
+        </h1>
+        <div class="leftName__info flex">
+            <i class="ri-user-line" style="margin-right: 10px;"></i>{{ $item->user->name }}
+        </div>
+        <div class="leftName__info flex">
+        <i class="ri-money-dollar-circle-line" style="margin-right: 10px;"></i>{{ $item->harga }}
+        </div>
+        <div class="leftLoc__info flex">
+            <i class="ri-map-pin-line" style="margin-right: 10px;" ></i>{{ $item->alamat }}
+        </div>
+        <p class="leftDetail__info">
+        {{$item->deskripsi}}
+        </p>
+        <button class="kemitraanDetail__button" onclick="location.href='pembuatanFormulirMitra'">
+        AJUKAN KERJASAMA
+        </button>
+    </div>
+</div>
+@endforeach
+    
 @endsection

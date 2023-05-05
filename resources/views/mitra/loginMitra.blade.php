@@ -21,7 +21,7 @@
                 <h2>Login</h2>
                 <p>Bersama kami memajukan pertanian indonesia</p>
             </div>
-        <form method="POST">
+        <form action="{{ route("loginMitra.auth") }}" method="POST">
         <div class="log__input">
             <div class="input__box">
                 <i class="ri-mail-line"></i>
@@ -35,7 +35,7 @@
             <button  class="log__in button" type="submit" name="submit" >
             Login Now
             </button> 
-            <div class="text__sign-up">Don't have an account? <a href="registerMitra.php" class="reg__now">register now</a></div>
+            <div class="text__sign-up">Don't have an account? <a href="registerMitra" class="reg__now">register now</a></div>
         </div>
         </form>
     </div>

@@ -12,6 +12,7 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="css/agro_style.css">
     <!--=============== BOSTRAPP ===============-->
+    
 
 </head>
 <!---------------- HEADER ---------------->
@@ -49,13 +50,17 @@
                     <div class="sub-menu">
                         <div class="user-info">
                             <img src="../../asset/user.png" alt="">
-                            <h2>Ilham Zamzami</h2>
+                            <h2>{{ Auth::user()->name }}</h2>
                         </div>
                         <hr>
 
                         <ul class="sub__list">
                             <li class="sub__item">
-                                <a href="updateProfilAgro">
+                                @if (!Auth::user()->ClientData)
+                                    <a href="createProfilAgro">
+                                @else
+                                    <a href="updateProfilAgro">
+                                @endif
                                 <div class="item">
                                     <i class="ri-user-line"></i>
                                     <p>Profile</p>

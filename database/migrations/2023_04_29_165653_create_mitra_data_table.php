@@ -16,8 +16,11 @@ class CreateMitraDataTable extends Migration
         Schema::create('mitra_data', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->string('nik');
-            $table->string('kodepos');
+            $table->string('namausaha');
+            $table->string('nomor_telp')->nullable();
+            $table->string('alamat');
+            $table->longText('deskripsi');
+            $table->string('image');
             $table->timestamps();
         });
     }

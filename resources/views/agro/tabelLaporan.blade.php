@@ -30,22 +30,20 @@
     <table>
         <tr>
             <th>No</th>
-            <th>Nama Produk</th>
+            <th>Tanggal Produksi</th>
+            <th>Deskripsi</th>
             <th>Produksi Awal</th>
             <th>Produksi Akhir</th>
         </tr>
+        @foreach ($laporans as $item)
         <tr>
-            <td>1</td>
-            <td>Aris</td>
-            <td>3mm3</td>
-            <td></td>
+            <td>{{ $item->id }}</td>
+            <td>{{ $item->tgl_produksi }}</td>
+            <td>{{ $item->deskripsi }}</td>
+            <td>{{ $item->produksi_awal }}</td>
+            <td>{{ $item->produksi_akhir }}</td>
         </tr>
-        <tr>
-            <td>2</td>
-            <td>Taufik</td>
-            <td>3mm3</td>
-            <td></td>
-        </tr>
+        @endforeach
     </table>
     <a href="detailTabelLaporan">
     <div class="btntambah">

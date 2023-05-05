@@ -18,6 +18,12 @@ class CreateFormulirTable extends Migration
             $table->foreignId('user_id')->constrained();
             $table->string('name');
             $table->string('alamat');
+            $table->string('nama_usaha');
+            $table->integer('nik');
+            $table->integer('kode_pos');
+            $table->longText('alasan');
+            $table->longText('deskripsi');
+            $table->string('permintaan');
             $table->timestamps();
         });
     }

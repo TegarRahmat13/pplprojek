@@ -1,9 +1,10 @@
 <style>
     *{
         box-sizing: border-box;
-        margin-top: 20px;
+        margin-top: 20%;
     }
     .row{
+        margin-top: 10%;
         display:grid;
         grid-template-columns: 33.33% 33.33% 33.33%;
         justify-content: center;
@@ -63,9 +64,11 @@
 @section('container')
 <h1 style="margin-left:5% ;" >Profile</h1>
 <hr>
+<form action="{{ route('create_profil') }}" method="POST" enctype="multipart/form-data">
+    @csrf
     <div class="row">
         <div class="column1">
-            <input type="file" name="image" id="" style="margin-top: 30%" >
+            <input type="file" name="update_image" id="" style="margin-top: 30%" >
         <br>
         <div class="btn_col1">
             <div class="btn_tambah">
@@ -74,9 +77,9 @@
         </div>
         <div class="column2">
             <label for="">Username</label><br>
-                <input type="text" name="update_name" class="form-control"   id="exampleInputEmail1" style="height: 10%; width: 60%" ><br><br>
+                <input type="text" name="update_name" class="form-control"   id="exampleInputEmail1" style="height: 10%; width: 60%" value="{{ Auth::user()->name }}"><br><br>
             <label for="">Nomor Telepon</label><br>
-                <input type="number" name="update_nomortelepon" class="form-control" id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
+                <input type="number" name="update_nomortelp" class="form-control" id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
             <label for="">Nama Usaha</label><br>
                 <input type="text" name="update_namausaha" class="form-control"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
             <label for="">Harga</label><br>
@@ -84,15 +87,15 @@
         </div>
         <div class="column3">
             <label for="">Email</label><br>
-                    <input type="email" name="update_email"  id="exampleInputEmail1" style="height: 10%; width: 60%" ><br><br>
+                    <input type="email" name="update_email"  id="exampleInputEmail1" style="height: 10%; width: 60%" value="{{ Auth::user()->email }}"><br><br>
                 <label for="">Alamat</label><br>
-                    <input type="text" name="update_alamatProfil"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
+                    <input type="text" name="update_alamat"  id="exampleInputEmail1" style="height: 10%; width: 60%"><br><br>
                 <label for="">Deskripsi</label><br>
                     <input type="text" name="update_deskripsi"  id="exampleInputEmail1" style="height: 35%; width: 60%"><br><br>
         </div>
     </div>
     <div class="btn_simpan">
-        <button type="submit" value="update profile" name="submit" class="btn_submit" style="background:#159895;">Submit</button>
+        <button type="submit" class="btn_submit" style="background:#159895;">Submit</button>
     </div>
         </form>
 @endsection

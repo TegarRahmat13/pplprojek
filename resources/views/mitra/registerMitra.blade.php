@@ -10,7 +10,6 @@
 
 </head>
 <body>
-
 <div class="login__container container">
     <div class="login__left">
         <h1 class="text-1">Agrocorp</h1>
@@ -22,7 +21,7 @@
                 <h2>Register</h2>
                 <p>Silahkan Membuat akun terlebih dahulu</p>
             </div>
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('authRegisterMitra') }}" method="POST" enctype="multipart/form-data">
         <div class="log__input">
         <div class="input__box">
                 <!-- <i class="ri-mail-line"></i> -->

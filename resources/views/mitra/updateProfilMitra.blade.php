@@ -70,28 +70,23 @@
                 <div class="btn_edit">
                     <a href="detailUpdateProfilMitra">Edit</a>
                 </div>
-                <div class="btn_tambah">
-                        <a href="detailUpdateProfilMitra">Tambah</a>
-                    </div>
 
             </div>
             <div class="column2">
                 <label for="">Username</label><br>
-                    <input type="text" name="name" id="" style="height: 10%; width: 60%" ><br><br>
+                    <input type="text" name="name" id="" style="height: 10%; width: 60%" value="{{ Auth::user()->name }}"><br><br>
                 <label for="">Nomor Telepon</label><br>
-                    <input type="number" name="name" id="" style="height: 10%; width: 60%"><br><br>
+                    <input type="number" name="nomor_telp" id="" style="height: 10%; width: 60%" value="{{ Auth::user()->MitraData->nomor_telp }}"><br><br>
                 <label for="">Nama Usaha</label><br>
-                    <input type="text" name="name" id="" style="height: 10%; width: 60%"><br><br>
-                <label for="">Harga</label><br>
-                    <input type="number" name="name" id="" style="height: 10%; width: 60%"><br><br>
+                    <input type="text" name="namausaha" id="" style="height: 10%; width: 60%" value="{{ Auth::user()->MitraData->namausaha }}"><br><br>
             </div>
             <div class="column3">
                 <label for="">Email</label><br>
-                        <input type="email" name="name" id="" style="height: 10%; width: 60%" ><br><br>
+                        <input type="email" name="email" id="" style="height: 10%; width: 60%" value="{{ Auth::user()->email }}"><br><br>
                     <label for="">Alamat</label><br>
-                        <input type="text" name="name" id="" style="height: 10%; width: 60%"><br><br>
+                        <input type="text" name="alamat" id="" style="height: 10%; width: 60%"value="{{ Auth::user()->MitraData->alamat }}"><br><br>
                     <label for="">Deskripsi</label><br>
-                        <input type="text" name="name" id="" style="height: 35%; width: 60%"><br><br>
+                        <input type="text" name="deskripsi" id="" style="height: 35%; width: 60%" value="{{ Auth::user()->MitraData->deskripsi }}"><br><br>
             </div>
         </div>
 @endsection
