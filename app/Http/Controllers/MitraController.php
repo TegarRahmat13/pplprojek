@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Session;
 
 class MitraController extends Controller
 {
-    public function loginMitra() 
+    public function loginMitra()
     {
         return view('mitra.loginMitra');
     }
@@ -24,11 +24,11 @@ class MitraController extends Controller
         $credentials = $req->only("email", "password");
         if (Auth::attempt($credentials)) {
             $req->session()->regenerate();
-            return redirect("/homeMitra");
+            return redirect("/homeMitra")->with("success", "Login sukses");
         }
-        return redirect()->back();
+        return redirect()->back()->with("error", "Maaf akun atau password belum terdaftar. Silahkan registrasi");
     }
-    public function registerMitra() 
+    public function registerMitra()
     {
         return view('mitra.registerMitra');
     }
@@ -52,7 +52,7 @@ class MitraController extends Controller
                 "role" => "Mitra"
             ]);
             DB::commit();
-            return redirect("/loginMitra");
+            return redirect("/loginMitra")->with("success", "Registrasi sukses");
         } catch (Exception $e) {
             DB::rollBack();
             return redirect()->back()->with("error", $e->getMessage());
@@ -60,7 +60,7 @@ class MitraController extends Controller
     }
 
 
-    public function homeMitra() 
+    public function homeMitra()
     {
         return view('mitra.homeMitra');
     }
@@ -76,67 +76,67 @@ class MitraController extends Controller
     public function Create_ProfilMitra(Request $request)
     {
         MitraData::create([
-            'user_id'=>Auth::user()->id,
-            'namausaha'=>$request->update_namausaha,
-            'alamat'=>$request->update_alamat,
-            'nomor_telp'=>$request->update_nomortelp,
-            'deskripsi'=>$request->update_deskripsi,
-            'image'=>$request->update_image,
+            'user_id' => Auth::user()->id,
+            'namausaha' => $request->update_namausaha,
+            'alamat' => $request->update_alamat,
+            'nomor_telp' => $request->update_nomortelp,
+            'deskripsi' => $request->update_deskripsi,
+            'image' => $request->update_image,
         ]);
 
         return redirect('updateProfilMitra');
     }
-    public function updateProfilMitra() 
+    public function updateProfilMitra()
     {
-       
+
         return view('mitra.updateProfilMitra');
     }
-    public function detailUpdateProfilMitra() 
+    public function detailUpdateProfilMitra()
     {
         return view('mitra.detailUpdateProfilMitra');
     }
-    public function kemitraanMitra() 
+    public function kemitraanMitra()
     {
         return view('mitra.kemitraanMitra')->with([
-            'kemitraan'=>ClientData::all()
+            'kemitraan' => ClientData::all()
         ]);
     }
-    public function detailKemitraanMitra() 
+    public function detailKemitraanMitra()
     {
         return view('mitra.detailKemitraanMitra')->with([
-            'Detail_kemitraan'=>ClientData::all()
+            'Detail_kemitraan' => ClientData::all()
         ]);
     }
-    public function pembuatanFormulirMitra() 
+    public function pembuatanFormulirMitra()
     {
         return view('mitra.pembuatanFormulirMitra');
     }
     public function create_FormulirMitra(Request $request)
     {
         formulir::create([
-            'user_id'=>Auth::user()->id,
-            'name'=>$request->update_nama,
-            'namausaha'=>$request->update_namausaha,
-            'alamat'=>$request->update_alamat,
-            'nik'=>$request->update_nik,
-            'kode_pos'=>$request->update_kodePos,
-            'nomor_telp'=>$request->update_nomortelp,
-            'deskripsi'=>$request->update_deskripsi,
-            'alasan'=>$request->update_alasan,
-            'permintaan'=>$request->update_permintaan,
+            'user_id' => Auth::user()->id,
+            'name' => $request->update_nama,
+            'namausaha' => $request->update_namausaha,
+            'alamat' => $request->update_alamat,
+            'nik' => $request->update_nik,
+            'kode_pos' => $request->update_kodePos,
+            'nomor_telp' => $request->update_nomortelp,
+            'deskripsi' => $request->update_deskripsi,
+            'alasan' => $request->update_alasan,
+            'permintaan' => $request->update_permintaan,
         ]);
 
         return redirect('kemitraanMitra');
     }
-    public function pembayaranMitra() 
+    public function pembayaranMitra()
     {
         return view('mitra.pembayaranMitra');
     }
-    public function detailPembayaranMitra() 
+    public function detailPembayaranMitra()
     {
         return view('mitra.detailPembayaranMitra');
     }
-    public function uploadBukti() 
+    public function uploadBukti()
     {
         return view('mitra.uploadBukti');
     }

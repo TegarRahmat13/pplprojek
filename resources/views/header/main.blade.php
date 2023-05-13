@@ -12,7 +12,7 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="css/agro_style.css">
     <!--=============== BOSTRAPP ===============-->
-    
+    <script src="{{ asset("assets/sweetalert2/dist/sweetalert2.all.min.js") }}"></script>
 
 </head>
 <!---------------- HEADER ---------------->
@@ -68,11 +68,19 @@
                                 </a>
                             </li>
                             <li class="sub__item">
-                                <a href="/pembayaran">
+                                <a href="mitraPembayaran">
                                 <div class="item">
                                     <i class="ri-coins-line"></i><p>Pembayaran</p>
                                 </div>
                                 </a>
+                            </li>
+                            <li class="sub__item">
+                                <a href="transaksi">
+                                <div class="item">
+                                    <i class="ri-exchange-dollar-line"></i><p>Riwayat Transaksi</p>
+                                </div>
+                                </a>
+                            </li>
                             <hr>
                             <li class="sub__item">
                                 <a href="loginAgro.php">

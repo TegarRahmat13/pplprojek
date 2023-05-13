@@ -34,6 +34,10 @@ Route::post('/create_profil', [AgroController::class, 'create_profil'])->name('c
 Route::get('/pembayaranAgro', [AgroController::class, 'pembayaranFunc'])->name('pembayaranAgro');
 Route::get('/detailPembayaranAgro', [AgroController::class, 'detailPembayaranFunc'])->name('detailPembayaranAgro');
 
+Route::get('/transaksi', [AgroController::class, 'transaksiFunc'])->name('transaksi');
+Route::get('/detailTransaksi', [AgroController::class, 'detailTransaksiFunc'])->name('detailTransaksi');
+
+
 Route::get('/permintaanAgro', [AgroController::class, 'permintaanFunc'])->name('permintaanAgro');
 
 Route::get('/kemitraanAgro', [AgroController::class, 'kemitraanFunc'])->name('kemitraanAgro');
@@ -44,9 +48,13 @@ Route::get('/detailTabelSuratBermitra', [AgroController::class, 'detailTabelSura
 
 
 Route::get('/pencatatanAgro', [AgroController::class, 'pencatatanFunc'])->name('pencatatanAgro');
+Route::get('/perhitunganAgro', [AgroController::class, 'perhitunganFunc'])->name('perhitunganAgro');
 Route::get('/tabelLaporan', [AgroController::class, 'tabelLaporanFunc'])->name('tabelLaporan');
 Route::get('/detailTabelLaporan', [AgroController::class, 'detailTabelLaporanFunc'])->name('detailtTabelLaporan');
 Route::post('/detailTabelLaporan', [AgroController::class, 'tambah_laporan'])->name('tambah_laporan');
+
+Route::get('/mitraPembayaran', [AgroController::class, 'mitraPembayaranFunc'])->name('mitraPembayaran');
+Route::get('/detailMitraPembayaran', [AgroController::class, 'detailMitraPembayaranFunc'])->name('detailMitraPembayaran');
 
 
 /*==================================================================================================================== */

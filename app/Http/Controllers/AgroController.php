@@ -43,7 +43,7 @@ class AgroController extends Controller
                 "role" => "Agro"
             ]);
             DB::commit();
-            return redirect("/loginAgro");
+            return redirect("/loginAgro")->with("success", "Registrasi berhasil");
         } catch (Exception $e) {
             DB::rollBack();
             return redirect()->back()->with("error", $e->getMessage());
@@ -79,9 +79,9 @@ class AgroController extends Controller
         $credentials = $req->only("email", "password");
         if (Auth::attempt($credentials)) {
             $req->session()->regenerate();
-            return redirect("/homeAgro");
+            return redirect("/homeAgro")->with("success", "Login berhasil");
         }
-        return redirect()->back();
+        return redirect()->back()->with("error", "Akun atau password belum terdaftar. Harap registrasi terlebih dahulu");
     }
     public function homeAgro()
     {
@@ -97,19 +97,19 @@ class AgroController extends Controller
     }
 
     public function create_profil(Request $request)
-    {   
-        $image= $request->update_image->store('avatar', 'public');
+    {
+        $image = $request->update_image->store('avatar', 'public');
         ClientData::create([
-            'user_id'=>Auth::user()->id,
-            'namausaha'=>$request->update_namausaha,
-            'alamat'=>$request->update_alamat,
-            'nomor_telp'=>$request->update_nomortelp,
-            'deskripsi'=>$request->update_deskripsi,
-            'harga'=>$request->update_harga,
-            'image'=>$image,
+            'user_id' => Auth::user()->id,
+            'namausaha' => $request->update_namausaha,
+            'alamat' => $request->update_alamat,
+            'nomor_telp' => $request->update_nomortelp,
+            'deskripsi' => $request->update_deskripsi,
+            'harga' => $request->update_harga,
+            'image' => $image,
         ]);
 
-        return redirect('updateProfilAgro');
+        return redirect('updateProfilAgro')->with("success", "Data berhasil diubah");
     }
     public function updateProfilAgroFunc()
     {
@@ -118,6 +118,14 @@ class AgroController extends Controller
     public function pembayaranFunc()
     {
         return view('agro.pembayaranAgro');
+    }
+    public function transaksiFunc()
+    {
+        return view('agro.transaksi');
+    }
+    public function detailTransaksiFunc()
+    {
+        return view('agro.detailTransaksi');
     }
     public function permintaanFunc()
     {
@@ -130,11 +138,11 @@ class AgroController extends Controller
     }
     public function tabelJumlahMitraFunc()
     {
-        return view ('agro.tabelJumlahMitra');
+        return view('agro.tabelJumlahMitra');
     }
     public function detailTabelJumlahMitraFunc()
     {
-        return view ('agro.detailTabelJumlahMitra');
+        return view('agro.detailTabelJumlahMitra');
     }
     public function tabelSuratBermitraFunc()
     {
@@ -148,10 +156,14 @@ class AgroController extends Controller
     {
         return view('agro.pencatatanAgro');
     }
+    public function perhitunganFunc()
+    {
+        return view('agro.perhitunganAgro');
+    }
     public function tabelLaporanFunc()
     {
         return view('agro.tabelLaporan')->with([
-            'laporans'=>laporan::all()
+            'laporans' => laporan::all()
         ]);
     }
     public function detailTabelLaporanFunc()
@@ -162,13 +174,22 @@ class AgroController extends Controller
     public function tambah_laporan(Request $request)
     {
         laporan::create([
-            'user_id'=>Auth::user()->id,
-            'tgl_produksi'=>$request->tgl_produksi,
-            'deskripsi'=>$request->deskripsi,
-            'produksi_awal'=>$request->produksi_awal,
-            'produksi_akhir'=>$request->produksi_akhir,
+            'user_id' => Auth::user()->id,
+            'tgl_produksi' => $request->tgl_produksi,
+            'deskripsi' => $request->deskripsi,
+            'produksi_awal' => $request->produksi_awal,
+            'produksi_akhir' => $request->produksi_akhir,
         ]);
 
         return redirect('tabelLaporan');
+    }
+
+    public function mitraPembayaranFunc()
+    {
+        return view('agro.mitraPembayaran');
+    }
+    public function detailMitraPembayaranFunc()
+    {
+        return view('agro.detailMitraPembayaran');
     }
 }

@@ -73,6 +73,7 @@
     <hr>
         <div class="row">
             <div class="column1">
+                <img src="{{ asset("storage/". Auth::user()->ClientData->image) }}">
                 <input type="file" name="image" id="" >
             <br>
             <div class="btn_col1">
@@ -80,7 +81,11 @@
                             <a href="detailUpdateProfilAgro">Tambah</a>
                         </div> --}}
                     <div class="btn_edit">
-                            <a href="#">Edit</a>
+                            @if (!Auth::user()->ClientData)
+                                <a href="#">Tambah</a>
+                            @else
+                                <a href="#">Edit</a>
+                            @endif
                         </div>
             </div>
             </div>
@@ -103,4 +108,10 @@
                         <input type="text" name="name"  id="exampleInputEmail1" style="height: 35%; width: 60%" value="{{ Auth::user()->ClientData->deskripsi }}"><br><br>
             </div>
         </div>
+
+    @if (session("success"))
+    <script>
+        Swal.fire("Sukses", `{{ session("success") }}`, "success")
+    </script>
+    @endif
 @endsection

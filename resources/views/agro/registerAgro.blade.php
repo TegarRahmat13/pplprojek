@@ -7,7 +7,7 @@
    <title>register</title>
 
    <link rel="stylesheet" href="css/logsign_agro.css">
-
+    <script src="{{ asset("assets/sweetalert2/dist/sweetalert2.all.min.js") }}"></script>
 </head>
 <body>
 <div class="login__container container">
@@ -43,16 +43,17 @@
                 <i class="ri-mail-line"></i>
                 <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png">
             </div> --}}
-            @if (session("error"))
-                <p>{{ session("error") }}</p>
-            @endif
             <button  class="log__in button" type="submit" name="submit" value="register now" style="margin-top: 10px" >
             Register
             </button> 
-            
         </div>
         </form>
     </div>
 </div> 
+@if (session("error"))
+<script>
+    Swal.fire("Gagal", `{{ session("error") }}`, "error");
+</script>
+@endif
 </body>
 </html>

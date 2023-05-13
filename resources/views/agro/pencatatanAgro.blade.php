@@ -30,7 +30,7 @@
 
 @section('container')
     <div class="btn_kotak">
-        <a href="#">
+        <a href="perhitunganAgro">
             <div class="btnkotakkanan">
                 <div class="btnperhitungan">
                     <img src="../../image/money-dollar-circle-line.png" alt="">

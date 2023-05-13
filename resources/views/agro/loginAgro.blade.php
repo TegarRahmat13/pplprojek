@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>login</title>
    <link rel="stylesheet" href="css/logsign_agro.css">
+   <script src="{{ asset("assets/sweetalert2/dist/sweetalert2.all.min.js") }}"></script>
 
 </head>
 <body>
@@ -39,6 +40,15 @@
         </form>
     </div>
 </div> 
+@if (session("error"))
+<script>
+    Swal.fire("Gagal", `{{ session("error") }}`, "error");
+</script>
+@elseif(session("success"))
+<script>
+    Swal.fire("Sukses", `{{ session("success") }}`, "success");
+</script>
+@endif
 </body>
 </html>
 

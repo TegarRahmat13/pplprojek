@@ -20,4 +20,10 @@
             </div>
         </div>  
     </div>
+
+@if (session('success'))
+    <script>
+        Swal.fire("Gagal", `{{ session("success") }}`, "success");
+    </script>
+@endif
 @endsection
