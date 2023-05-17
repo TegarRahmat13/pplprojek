@@ -59,6 +59,6 @@ h3 {
         </div>
 
     </section>
-<a href="view/admin/loginAdmin.php" class="delete-btn">Admin</a>
+<a href="/home" class="delete-btn">Admin</a>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgroController;
 use App\Http\Controllers\MitraController;
 use Illuminate\Support\Facades\Route;
@@ -79,3 +80,12 @@ Route::post('/create_FormulirMitra', [MitraController::class, 'create_FormulirMi
 Route::get('/pembayaranMitra', [MitraController::class, 'pembayaranMitra'])->name('pembayaranMitra');
 Route::get('/detailPembayaranMitra', [MitraController::class, 'detailPembayaranMitra'])->name('detailPembayaranMitra');
 Route::get('/uploadBukti', [MitraController::class, 'uploadBukti'])->name('uploadBukti');
+
+/*==================================================================================================================== */
+Route::get('/home', [AdminController::class, 'homeAdminFunc'])->name('home');
+Route::get('/profilAdmin', [AdminController::class, 'profilFunc'])->name('profilAdmin');
+Route::get('/createProfil', [AdminController::class, 'createProfilFunc'])->name('createProfil');
+Route::get('/updateProfil', [AdminController::class, 'updateProfilFunc'])->name('updateProfil');
+
+
+
