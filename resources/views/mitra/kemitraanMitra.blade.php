@@ -97,6 +97,12 @@
     .usaha__title-but:hover{
         background-color: var(--hijau-tua);
     }
+    #products{
+        display: flex;
+    }
+    .border{
+        border: 1;
+    }
 </style>
 @extends('header.main2')
 
@@ -125,17 +131,18 @@
             </ul>
         </div>
 
-        @foreach ($kemitraan as $item)
-        <div class="kemitraan__usaha-prodcut grid">
-            <div class="usaha grid">
-                <img class="usaha-img" src="../../image/mitra/kangkung.jpg" alt="">
-                <div class="usaha__title">
-                    <h1>{{ $item->namausaha }}</h1>
-                    <div class="usaha__user-icon">
-                        <i class="ri-user-line"></i>
-                        <p>{{ $item->user->name }}</p>
-                    </div>
-                    <div class="harga__title">
+        <div id="products">
+            @foreach ($kemitraan as $item)
+            <div class="kemitraan__usaha-prodcut grid">
+                <div class="usaha grid">
+                    <img class="usaha-img" src="../../image/mitra/kangkung.jpg" alt="">
+                    <div class="usaha__title">
+                        <h1>{{ $item->namausaha }}</h1>
+                        <div class="usaha__user-icon">
+                            <i class="ri-user-line"></i>
+                            <p>{{ $item->user->name }}</p>
+                        </div>
+                        <div class="harga__title">
                         <i class="ri-coin-line"></i>
                         <p>{{ $item->harga }}</p>
                     </div>
@@ -148,93 +155,8 @@
                     </button>
                 </div>
             </div>
-            <div class="usaha grid">
-                <img class="usaha-img" src="../../image/mitra/bayam.jpeg" alt="">
-                <div class="usaha__title">
-                    <h1>Bayam Hidroponik</h1>
-                    <div class="usaha__user-icon">
-                        <i class="ri-user-line"></i>
-                        <p>Rizal Maulana</p>
-                    </div>
-                    <div class="usaha__loc-icon">
-                        <i class="ri-map-pin-line"></i>
-                        <p>Situbondo, Jawa Timur</p>
-                    </div>
-                    <button class="usaha__title-but">
-                        Lihat detail
-                    </button>
-                </div>
-            </div>
-            <div class="usaha grid">
-                <img class="usaha-img" src="../../image/mitra/tomat.jpg" alt="">
-                <div class="usaha__title">
-                    <h1>Tomat Hidroponik</h1>
-                    <div class="usaha__user-icon">
-                        <i class="ri-user-line"></i>
-                        <p>Zulfan Rizki</p>
-                    </div>
-                    <div class="usaha__loc-icon">
-                        <i class="ri-map-pin-line"></i>
-                        <p>Banyuwangi, Jawa Timur</p>
-                    </div>
-                    <button class="usaha__title-but">
-                        Lihat detail
-                    </button>
-                </div>
-            </div>
-            <div class="usaha grid">
-                <img class="usaha-img" src="../../image/mitra/usaha.jpg" alt="">
-                <div class="usaha__title">
-                    <h1>Tomat Hidroponik</h1>
-                    <div class="usaha__user-icon">
-                        <i class="ri-user-line"></i>
-                        <p>Dani Sumargo</p>
-                    </div>
-                    <div class="usaha__loc-icon">
-                        <i class="ri-map-pin-line"></i>
-                        <p>Jember, Jawa Timur</p>
-                    </div>
-                    <button class="usaha__title-but">
-                        Lihat detail
-                    </button>
-                </div>
-            </div>
-            <div class="usaha grid">
-                <img class="usaha-img" src="../../image/mitra/usaha.jpg" alt="">
-                <div class="usaha__title">
-                    <h1>Tomat Hidroponik</h1>
-                    <div class="usaha__user-icon">
-                        <i class="ri-user-line"></i>
-                        <p>Dani Sumargo</p>
-                    </div>
-                    <div class="usaha__loc-icon">
-                        <i class="ri-map-pin-line"></i>
-                        <p>Jember, Jawa Timur</p>
-                    </div>
-                    <button class="usaha__title-but">
-                        Lihat detail
-                    </button>
-                </div>
-            </div>
-            <div class="usaha grid">
-                <img class="usaha-img" src="../../image/mitra/usaha.jpg" alt="">
-                <div class="usaha__title">
-                    <h1>Tomat Hidroponik</h1>
-                    <div class="usaha__user-icon">
-                        <i class="ri-user-line"></i>
-                        <p>Dani Sumargo</p>
-                    </div>
-                    <div class="usaha__loc-icon">
-                        <i class="ri-map-pin-line"></i>
-                        <p>Jember, Jawa Timur</p>
-                    </div>
-                    <button class="usaha__title-but">
-                        Lihat detail
-                    </button>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
-        @endforeach
-        
+</div>    
 @endsection

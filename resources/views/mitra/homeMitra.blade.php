@@ -23,7 +23,7 @@
 
 @if (session('success'))
     <script>
-        Swal.fire("Gagal", `{{ session("success") }}`, "success");
+        Swal.fire("Sukses", `{{ session("success") }}`, "success");
     </script>
 @endif
 @endsection

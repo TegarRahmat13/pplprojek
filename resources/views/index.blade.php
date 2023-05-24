@@ -55,10 +55,13 @@ h3 {
             <div class="save_">
                 <a href="/loginAgro" style="margin-right: 10%;background: #159895;color: white;border-radius: 5px;font-size: 20px;">Pelaku Agro</a>
                 <a href="/loginMitra" style="background: #159895;color: white;border-radius: 5px;font-size: 20px;">Mitra</a>
+                <br>
+                <br>
+                <a href="/home" class="delete-btn" style="background: #159895;color: white;border-radius: 5px;font-size: 20px;">Admin</a>
             </div>
         </div>
 
     </section>
-<a href="/home" class="delete-btn">Admin</a>
+
 </body>
 </html>

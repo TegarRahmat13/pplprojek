@@ -95,7 +95,7 @@
         </div>
     </div>
     <div class="btn_simpan">
-        <button type="submit" class="btn_submit" style="background:#159895;">Submit</button>
+        <button type="submit" class="btn_submit" style="background:#159895;">Simpan</button>
     </div>
         </form>
 @endsection

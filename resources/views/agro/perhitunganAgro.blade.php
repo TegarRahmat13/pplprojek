@@ -70,7 +70,7 @@
     <div class="row">
         <div class="column_1">
             <p>Bulan Produksi Awal</p> <br>
-            <input type="text" style="border: none;border-bottom: 2px solid #159895;background: transparent;margin-bottom: 10px;display: block;width:50%;"> <br> <br>
+            <input type="" style="border: none;border-bottom: 2px solid #159895;background: transparent;margin-bottom: 10px;display: block;width:50%;"> <br> <br>
             <p>Bulan Produksi Akhir</p><br>
             <input type="text" style="border: none;border-bottom: 2px solid #159895;background: transparent;margin-bottom: 10px;display: block; width:50%;">
         </div>
